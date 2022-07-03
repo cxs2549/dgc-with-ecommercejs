@@ -45,3 +45,12 @@ h3, button {
 a:visited {
   color: inherit;
 }
+
+p {
+font-size: 12px;
+}
+
+li {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

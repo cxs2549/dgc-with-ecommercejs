@@ -1,9 +1,9 @@
 import Product from './Product'
 const ProductList = ({products}) => {
   return (
-    <div className="py-5 ">
+    <div className="">
       <div className="max-w-4xl mx-auto">
-        <div className="md:grid grid-cols-2 xl:grid-cols-3">
+        <div className="lg:grid gap-x-2 flex flex-wrap lg:grid-cols-3">
           {products.map((product, i) => (
             <Product key={i} product={product} />
           ))}

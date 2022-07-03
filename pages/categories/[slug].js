@@ -36,7 +36,7 @@ export default function CategoryPage({ cats, products, category }) {
   const newCats = cats.filter((cat) => cat.slug !== category.slug)
   useEffect(() => {
     setCategories(newCats)
-  })
+  }, [])
   return (
     <div>
       <div className="max-w-4xl mx-auto px-5 lg:px-0">

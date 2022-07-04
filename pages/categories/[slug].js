@@ -3,6 +3,7 @@ import ProductList from "../../components/ProductList"
 import CategoryList from "../../components/CategoryList"
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import Section from "../../components/Section"
 
 export async function getStaticProps({ params }) {
   const { slug } = params
@@ -45,19 +46,20 @@ export default function CategoryPage({ cats, products, category }) {
   }
   return (
     <div>
-      <div className="max-w-4xl mx-auto px-5 lg:px-0">
+      <div className="max-w-4xl mx-auto lg:px-0">
         <CategoryList categories={categories} />
-        <motion.div
+        {/* <motion.div
           initial="hidden"
           animate="enter"
           exit="exit"
           variants={variants}
         >
-          <div className="py-4 pb-6">
-            <h1 className="text-3xl">{category.slug.toLowerCase()}</h1>
+          <div className="py-5">
+            <h1 className="text-3xl pl-5">{category.slug}</h1>
           </div>
           <ProductList products={products} />
-        </motion.div>
+        </motion.div> */}
+        <Section title={category.slug} products={products} />
       </div>
     </div>
   )

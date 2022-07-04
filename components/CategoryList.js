@@ -5,12 +5,12 @@ const CategoryList = ({ categories }) => {
   const router = useRouter()
   const revCats = categories.reverse()
   return (
-    <div className="w-full py-5">
-      <div className="w-full max-w-xs">
-        <div className="flex justify-between w-full">
+    <div className="w-full pb-5">
+      <div className="w-full px-5 max-w-xs">
+        <div className="flex gap-6 w-full">
           {revCats.map((cat, i) => (
             <Link className="cursor-pointer" key={i} href={`/categories/${cat.slug}`}>
-              <a className="capitalize font-medium">{cat.slug}</a>
+              <a className="capitalize font-semibold whitespace-nowrap text-[15px]">{cat.slug}</a>
             </Link>
           ))}
         </div>

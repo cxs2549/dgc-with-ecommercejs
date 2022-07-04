@@ -48,13 +48,15 @@ export default function ProductPage({ product, cats }) {
   //   commerce.cart.add(product.id).then(({ cart }) => setCart(cart))
   return (
     <div>
-      <div className="px-5">
+      <div className="">
         <CategoryList categories={cats} />
-        <div className="py-5 flex flex-col gap-4 grid-cols-2">
-          <img src={image.url} className="rounded-lg" alt="" />
-          <div className="flex flex-col justify-between">
+        <div className=" w-full flex flex-col grid-cols-2">
+          <div className="h-40">
+            <img src={image.url} className="rounded-lg h-full w-full object-cover" alt="" />
+          </div>
+          <div className="flex bg-purple-500 py-2 px-5 flex-col justify-between">
             <div className="flex flex-col">
-              <h3 className="text-2xl">{product.name}</h3>
+              <h3 className="text-xl">{product.name}</h3>
               <h3 className=" -mt-0.5 opacity-80 text-xs">
                 {product.categories[1] && product.categories[1].slug
                   ? product.categories[1].slug
@@ -65,9 +67,7 @@ export default function ProductPage({ product, cats }) {
               <button className="font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
                 <AiOutlineHeart size={16} />
               </button>
-              <button
-                className="font-[500] flex items-center gap-2 text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all whitespace-nowrap duration-150"
-              >
+              <button className="font-[500] flex items-center gap-2 text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all whitespace-nowrap duration-150">
                 <BsBag size={16} />
                 Add to bag
               </button>

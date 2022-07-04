@@ -2,14 +2,18 @@ import Link from "next/link"
 
 const Product = ({ product }) => {
   return (
-    <div className="grid grid-cols-[1.5fr,2fr] mb-2 w-full">
+    <div id="product" className="flex flex-col grid-cols-[1.5fr,2fr] mb-2 w-full">
       <Link href={`/products/${product.permalink}`}>
-        <a className="bg-slate-500 rounded-lg h-32 w-32">
-          <img src={product.image.url} className="rounded-lg object-cover h-full" alt="" />
+        <a className="bg-slate-500 rounded-lg h-28 w-full">
+          <img
+            src={product.image.url}
+            className="rounded-lg object-cover w-full h-full"
+            alt=""
+          />
         </a>
       </Link>
-      <div className="text-sm">
-        <p>{product.name}</p> <p>strain</p> <p>weight</p>
+      <div className="text-sm p-2 h-[100px]">
+        <h3 className="leading-4">{product.name}</h3> <p>strain</p> <p>weight</p>
         <p>price</p>
       </div>
     </div>
